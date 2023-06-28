@@ -1,11 +1,25 @@
+import { useState } from "react";
 import styled, { keyframes } from "styled-components";
-import Circle from "./Circle";
 
 function App() {
+  const [value, setValue] = useState("");
+
+  const onChange = (event: React.FormEvent<HTMLInputElement>) => {
+    setValue(event.currentTarget.value);
+    console.log(event.currentTarget.value);
+  };
+
   return (
     <div>
-      <Circle backgroundColor="teal" borderColor="black"></Circle>
-      <Circle backgroundColor="blue"></Circle>
+      <form>
+        <input
+          value={value}
+          onChange={onChange}
+          type="text"
+          placeholder="username"
+        ></input>
+        <button type="submit">Log In</button>
+      </form>
     </div>
   );
 }
