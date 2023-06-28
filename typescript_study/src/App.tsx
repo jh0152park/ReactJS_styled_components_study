@@ -9,9 +9,15 @@ function App() {
     console.log(event.currentTarget.value);
   };
 
+  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log(`input is ${value}`);
+    setValue("");
+  };
+
   return (
     <div>
-      <form>
+      <form onSubmit={onSubmit}>
         <input
           value={value}
           onChange={onChange}
