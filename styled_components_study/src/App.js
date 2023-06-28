@@ -18,11 +18,19 @@ const Text = styled.span`
   color: white;
 `;
 
+const Button = styled.button`
+  color: white;
+  background-color: tomato;
+  border-radius: 50px;
+  border: 0;
+`;
+
 function App() {
   return (
-    <Father style={{ display: "flex" }}>
-      <Box bgColor="teal" />
-      <Circle bgColor="darkblue" />
+    <Father>
+      <Button as="a" href="#">
+        Login
+      </Button>
     </Father>
   );
 }
