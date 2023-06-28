@@ -25,12 +25,21 @@ const Button = styled.button`
   border: 0;
 `;
 
+const Input = styled.input.attrs({
+  required: true,
+  minLength: 10,
+})`
+  background-color: teal;
+`;
+
 function App() {
   return (
     <Father>
-      <Button as="a" href="#">
-        Login
-      </Button>
+      <Input></Input>
+      <Input></Input>
+      <Input></Input>
+      <Input></Input>
+      <Input></Input>
     </Father>
   );
 }
