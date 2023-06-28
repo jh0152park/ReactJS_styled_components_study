@@ -1,11 +1,33 @@
 import styled from "styled-components";
 
+const Father = styled.div`
+  display: flex;
+`;
+
+const Box1 = styled.div`
+  background-color: teal;
+  width: 100px;
+  height: 100px;
+`;
+
+const Box2 = styled.div`
+  background-color: yellow;
+  width: 100px;
+  height: 100px;
+`;
+
+const Text = styled.span`
+  color: white;
+`;
+
 function App() {
   return (
-    <div style={{ display: "flex" }}>
-      <div style={{ backgroundColor: "teal", width: 100, height: 100 }}></div>
-      <div style={{ backgroundColor: "yellow", width: 100, height: 100 }}></div>
-    </div>
+    <Father style={{ display: "flex" }}>
+      <Box1>
+        <Text>Hello</Text>
+      </Box1>
+      <Box2 />
+    </Father>
   );
 }
 
